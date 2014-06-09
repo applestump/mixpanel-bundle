@@ -12,6 +12,7 @@ env:
 before_script:
   - composer require symfony/http-foundation:${SYMFONY_VERSION}
   - composer require doctrine/common:2.4
+  - composer install -n --dev --prefer-source
 
 script: phpunit
 
