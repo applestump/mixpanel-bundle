@@ -1,0 +1,7 @@
+parameters:
+#    applestump_mixpanel.example.class: Applestump\MixpanelBundle\Example
+
+services:
+#    applestump_mixpanel.example:
+#        class: %applestump_mixpanel.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
