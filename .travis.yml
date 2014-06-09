@@ -13,7 +13,7 @@ before_script:
   - composer require symfony/http-foundation:${SYMFONY_VERSION}
   - composer require doctrine/common:2.4
 
-script: phpunit --coverage-text
+script: phpunit ./Tests/Annotations/
 
 notifications:
   email:
