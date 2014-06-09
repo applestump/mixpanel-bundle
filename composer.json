@@ -20,7 +20,7 @@
         }
     },
     "target-dir" : "Applestump/MixpanelBundle",
-    "repositories" : [{
+    "repositories" : [
     ],
     "extra" : {
         "branch-alias" : {
