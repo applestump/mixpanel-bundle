@@ -1,7 +1,9 @@
 parameters:
-#    applestump_mixpanel.example.class: Applestump\MixpanelBundle\Example
+    applestump_mixpanel.manager.class: Applestump\MixpanelBundle\Services\MixpanelFactory
+    applestump_mixpanel.token: #blank to be overriden by extension manager class
+    applestump_mixpanel.use_fos: true
 
 services:
-#    applestump_mixpanel.example:
-#        class: %applestump_mixpanel.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    applestump_mixpanel:
+        class: %applestump_mixpanel.manager.class%
+        arguments: [%applestump_mixpanel.token%]

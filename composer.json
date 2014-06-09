@@ -1,0 +1,30 @@
+{
+    "name" : "applestump/mixpanelbundle",
+    "description" : "A bundle to integrate the mixpanel php client into symfony",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Matt Lody",
+        "email" : "mattlody@gmail.com"
+    }],
+    "keywords" : [
+        "mixpanel bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Applestump\\MixpanelBundle" : ""
+        }
+    },
+    "target-dir" : "Applestump/MixpanelBundle",
+    "repositories" : [{
+    ],
+    "extra" : {
+        "branch-alias" : {
+            "dev-master" : "2.5-dev"
+        }
+    }
+}
