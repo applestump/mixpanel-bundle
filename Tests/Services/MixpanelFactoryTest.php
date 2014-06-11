@@ -11,7 +11,7 @@ namespace Applestump\MixpanelBundle\Tests\Annotations;
 use Applestump\MixpanelBundle\Services\MixpanelFactory;
 use Doctrine\Common\Annotations\AnnotationReader;
 
-class ReaderTest extends \PHPUnit_Framework_TestCase
+class MixpanelFactoryTest extends \PHPUnit_Framework_TestCase
 {
     public function testGet()
     {

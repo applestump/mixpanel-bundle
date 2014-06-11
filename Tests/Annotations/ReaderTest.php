@@ -25,7 +25,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
         //assert that the 'scalar' property == "Value 1"
         $properties = $this->getUserReader()->getProperties(new SampleModel());
 
-        $this->assertEquals("Value 1", $properties['scalar']);
+        $this->assertSame("Value 1", $properties['scalar']);
     }
 
     private function getUserReader()
