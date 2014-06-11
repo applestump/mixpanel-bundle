@@ -1,3 +1,0 @@
-applestump_mixpanel_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: ApplestumpMixpanelBundle:Default:index }
