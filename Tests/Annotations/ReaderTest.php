@@ -9,18 +9,30 @@
 namespace Applestump\MixpanelBundle\Tests\Annotations;
 
 use Applestump\MixpanelBundle\Tests\Annotations\Model\SampleModel;
-use Applestump\MixpanelBundle\Annotations\Reader;
+use Applestump\MixpanelBundle\Services\Reader;
 use Doctrine\Common\Annotations\AnnotationReader;
 
 class ReaderTest extends \PHPUnit_Framework_TestCase
 {
     public function testId()
     {
+        // assert that the id is read correctly
+        $this->assertEquals(1234, $this->getUserReader()->getId(new SampleModel()));
+    }
+
+    public function testScalar()
+    {
+        //assert that the 'scalar' property == "Value 1"
+        $properties = $this->getUserReader()->getProperties(new SampleModel());
+
+        $this->assertEquals("Value 1", $properties['scalar']);
+    }
+
+    private function getUserReader()
+    {
         $annotationReader = new AnnotationReader();
         $userReader = new Reader($annotationReader);
-        $userReader->setUserObject(new SampleModel());
 
-        // assert that the id is read correctly
-        $this->assertEquals(1234, $userReader->getId());
+        return $userReader;
     }
 }

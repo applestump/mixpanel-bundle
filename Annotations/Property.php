@@ -15,27 +15,24 @@ use Doctrine\Common\Annotations\Annotation;
  */
 final class Property
 {
-    private $propertyName;
 
-    public function __construct($options)
+    private $name;
+
+    public function __construct(array $values)
     {
-        if (isset($options['value'])) {
-            $options['propertyName'] = $options['value'];
-            unset($options['value']);
+
+        if (isset($values['name'])) {
+            $this->name = $values['name'];
+        }
+        else{
+            throw new \InvalidArgumentException('The Mixpanel Property annotation must specify the name parameter');
         }
 
-        foreach ($options as $key => $value) {
-            if (!property_exists($this, $key)) {
-                throw new \InvalidArgumentException(sprintf('Property "%s" does not exist', $key));
-            }
-
-            $this->$key = $value;
-        }
     }
 
-    public function getPropertyName()
+    public function getName()
     {
-        return $this->propertyName;
+        return $this->name;
     }
 
 } 

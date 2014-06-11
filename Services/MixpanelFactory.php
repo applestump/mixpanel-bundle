@@ -26,7 +26,7 @@ class MixpanelFactory
      */
     public function get()
     {
-        return Mixpanel::getInstance($this->token);
+        return \Mixpanel::getInstance($this->token);
     }
 
 } 

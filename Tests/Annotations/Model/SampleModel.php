@@ -5,8 +5,8 @@
  * Date: 09/06/2014
  * Time: 21:52
  */
-
-use Applestump\MixpanelBundle\Annotations as Mixpanel;;
+namespace Applestump\MixpanelBundle\Tests\Annotations\Model;
+use Applestump\MixpanelBundle\Annotations as Mixpanel;
 
 class SampleModel {
 
@@ -19,7 +19,7 @@ class SampleModel {
     }
 
     /**
-     * Mixpanel\Property(propertyName="scalar")
+     * @Mixpanel\Property(name="scalar")
      */
     public function getScalar()
     {
@@ -27,7 +27,7 @@ class SampleModel {
     }
 
     /**
-     * Mixpanel\Property(propertyName="simpleArray")
+     * @Mixpanel\Property(name="simpleArray")
      */
     public function getSimpleArray()
     {
@@ -37,7 +37,7 @@ class SampleModel {
     }
 
     /**
-     * Mixpanel\Property(propertyName="dictionary")
+     * @Mixpanel\Property(name="dictionary")
      */
     public function getDictionary()
     {

@@ -20,9 +20,13 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('applestump_mixpanel');
         $rootNode
-            ->children()
-            ->scalarNode('token')->cannotBeEmpty()->end()
-            ->end();
+            ->isRequired()
+                ->children()
+                ->scalarNode('token')
+                    -isRequired()
+                    ->cannotBeEmpty()
+                        ->end()
+                ->end();
 
 
         return $treeBuilder;
